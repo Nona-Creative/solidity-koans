@@ -3,7 +3,7 @@ Solidity Koans
 
 ### Before you start
 
-git checkout your own branch, so that you can commit your progress, 
+Create your own Git branch, so that you can commit your progress, 
 and so that you can checkout the ``solutions`` branch at any point. 
 
 ### Steps
