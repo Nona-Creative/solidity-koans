@@ -1,6 +1,11 @@
 Solidity Koans
 ===
 
+### Before you start
+
+git checkout your own branch, so that you can commit your progress, 
+and so that you can checkout the ``solutions`` branch at any point. 
+
 ### Steps
 
 1. in ``terminal 1`` start required services:
@@ -19,6 +24,10 @@ Solidity Koans
     ```
 
 4. Follow the instructions in each test file.
+
+### Solutions
+
+To see solutions checkout the ``solutions`` branch.
 
 ### More
 

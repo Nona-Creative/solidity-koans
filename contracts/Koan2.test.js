@@ -41,7 +41,7 @@ describe('2. Arithmetic & SafeMath', () => {
   //   Should revert transaction on overflow.
   // ----------------------------------------
 
-  describe('2.1', () => {
+  describe.skip('2.1', () => {
     parametrize([
       [1, 30, 31],
       [30, 2, 32],
@@ -87,7 +87,7 @@ describe('2. Arithmetic & SafeMath', () => {
   //   Should never overflow.
   // ----------------------------------------
 
-  describe('2.2', () => {
+  describe.skip('2.2', () => {
     parametrize([
       [1, 30, 29],
       [30, 2, 28],
@@ -124,7 +124,7 @@ describe('2. Arithmetic & SafeMath', () => {
   //   NOTE: uints will automatically round down
   // ----------------------------------------
 
-  describe('2.3', () => {
+  describe.skip('2.3', () => {
     const JUST_OVER_HALF_MAX = MAX.minus(1).div(2).add(1)
     const JUST_UNDER_HALF_MAX = MAX.minus(1).div(2)
     const MAX_100_PERC_NUMBER = new BigNumber('1157920892373161954235709850086879078532699846656405640394575840079131296399')

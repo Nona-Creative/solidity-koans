@@ -29,7 +29,7 @@ describe('1. Value Data Types', () => {
   // - myAddress
   // ----------------------------------------
 
-  describe('1.1', () => {
+  describe.skip('1.1', () => {
     it('should expose public properties and methods', contract('Koan1', async ({ accounts, instance }) => {
       assert.includeMembers(Object.keys(instance.methods), [
         'myNumber',
@@ -52,7 +52,7 @@ describe('1. Value Data Types', () => {
   // - myAddress : address = 0x7647eFCFb1ab2aaB3D799eDaF8fF8520F1183605
   // ----------------------------------------
 
-  describe('1.2', () => {
+  describe.skip('1.2', () => {
     parametrize([
       ['myNumber', 12],
       ['myBoolean', true],
@@ -84,7 +84,7 @@ describe('1. Value Data Types', () => {
   //   the result.
   // ----------------------------------------
 
-  describe('1.3', () => {
+  describe.skip('1.3', () => {
     parametrize([
       [1, 12],
       [3, 36],
@@ -100,37 +100,4 @@ describe('1. Value Data Types', () => {
       }))
     })
   })
-
-  // TODO: introduce simple getter and setter here?
-  // // ----------------------------------------
-  // // 1.4. a simple function that updates a property
-  // // ----------------------------------------
-  // //
-  // // Unskip the 1.4 describe block.
-  // //
-  // // Then create a method called setMyBoolean which:
-  // // - that takes a single boolean
-  // // - and update myBoolean
-  // // ----------------------------------------
-  //
-  // describe('1.4', () => {
-  //   parametrize([
-  //     [false],
-  //     [true],
-  //   ], (value) => {
-  //     it('should set the value of myBoolean as expected', contract('Koan1', async ({ accounts, instance }) => {
-  //       // when ... we set setMyBoolean
-  //       await ContractUtils.send(
-  //         instance.methods.setMyBoolean(value),
-  //         { from: accounts[0] },
-  //       )
-  //       // then ... should now contain the expected value
-  //       const result = await ContractUtils.call(
-  //         instance.methods.myBoolean(),
-  //         { from: accounts[0] },
-  //       )
-  //       assert.equal(result, value)
-  //     }))
-  //   })
-  // })
 })

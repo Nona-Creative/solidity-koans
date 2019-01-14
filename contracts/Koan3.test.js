@@ -42,7 +42,7 @@ describe('3. Storage Data Types : Arrays', () => {
   //   Returns the value of _xs
   // ----------------------------------------
 
-  describe('3.1', () => {
+  describe.skip('3.1', () => {
     it('should not expose private properties', contract('Koan3', async ({ accounts, instance }) => {
       assert.notIncludeMembers(Object.keys(instance.methods), [
         '_xs',
@@ -80,7 +80,7 @@ describe('3. Storage Data Types : Arrays', () => {
   //   Should take a uint and add it to _xs.
   // ----------------------------------------
 
-  describe('3.2', () => {
+  describe.skip('3.2', () => {
     describe('append', () => {
       it('should add to _xs array as expected', contract('Koan3', async ({ accounts, instance }) => {
         // given ... _xs has a predictable value
@@ -120,7 +120,7 @@ describe('3. Storage Data Types : Arrays', () => {
   //   in _xs.
   // ----------------------------------------
 
-  describe('3.3', () => {
+  describe.skip('3.3', () => {
     describe('sum', () => {
       parametrize([
         [[0, 1, 2, 3, 4, 5], 15],
@@ -162,7 +162,7 @@ describe('3. Storage Data Types : Arrays', () => {
   //   the provided array.
   // ----------------------------------------
 
-  describe('3.4', () => {
+  describe.skip('3.4', () => {
     describe('countEvens', () => {
       parametrize([
         [[0, 1, 2, 3, 4, 5, 6], 4],
@@ -206,7 +206,7 @@ describe('3. Storage Data Types : Arrays', () => {
   //   should be one shorter.
   // ----------------------------------------
 
-  describe('3.5', () => {
+  describe.skip('3.5', () => {
     describe('removeAt', () => {
       parametrize([
         [[1, 2, 3, 4, 5], 2, [1, 2, 4, 5]],
@@ -253,7 +253,7 @@ describe('3. Storage Data Types : Arrays', () => {
   //   all the even numbers from _xs.
   // ----------------------------------------
 
-  describe('3.6', () => {
+  describe.skip('3.6', () => {
     describe('getEvens', () => {
       parametrize([
         [[0, 1, 2, 3, 4, 5, 6], [0, 2, 4, 6]],

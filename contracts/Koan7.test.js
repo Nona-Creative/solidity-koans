@@ -43,7 +43,7 @@ describe('7. String and Bytes', () => {
   //   returns the value of _secretString
   // ----------------------------------------
 
-  describe('7.1', () => {
+  describe.skip('7.1', () => {
     it('should not expose private properties and methods', contract('Koan7', async ({ accounts, instance }) => {
       assert.notIncludeMembers(Object.keys(instance.methods), [
         '_secretString',
@@ -113,7 +113,7 @@ describe('7. String and Bytes', () => {
   // than the string equivalents.
   // ----------------------------------------
 
-  describe('7.2', () => {
+  describe.skip('7.2', () => {
     it('should not expose private properties and methods', contract('Koan7', async ({ accounts, instance }) => {
       assert.notIncludeMembers(Object.keys(instance.methods), [
         '_secretBytes32',
@@ -157,7 +157,7 @@ describe('7. String and Bytes', () => {
   //   "Xoan Seven"
   // ----------------------------------------
 
-  describe('7.3', () => {
+  describe.skip('7.3', () => {
     it('should return name as bytes with X instead of first letter', contract('Koan7', async ({ accounts, instance }) => {
       // when ... we get the name as bytes
       const result = await ContractUtils.call(
@@ -188,7 +188,7 @@ describe('7. String and Bytes', () => {
   //   The return value should be a bytes type
   // ----------------------------------------
 
-  describe('7.4', () => {
+  describe.skip('7.4', () => {
     it('should return redacted version of _cardNumber', contract('Koan7', async ({ accounts, instance }) => {
       // when ... we get the card number
       const result = await ContractUtils.call(
@@ -220,7 +220,7 @@ describe('7. String and Bytes', () => {
   //   The return value should be a bytes type
   // ----------------------------------------
 
-  describe('7.5', () => {
+  describe.skip('7.5', () => {
     it('should return correct values for public first and last names', contract('Koan7', async ({ accounts, instance }) => {
       // when ... we get the first and last name properties
       const firstName = await ContractUtils.call(
