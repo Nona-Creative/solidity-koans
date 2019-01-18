@@ -13,7 +13,6 @@ module.exports = {
     process.env.ACCOUNT3_PK,
   ],
   contracts: {
-    // 'Bank': 'Bank.sol:Bank',
     'Koan1': 'Koan1.sol:Koan1',
     'WhySafeMath': 'WhySafeMath.sol:WhySafeMath',
     'Koan2': 'Koan2.sol:Koan2',

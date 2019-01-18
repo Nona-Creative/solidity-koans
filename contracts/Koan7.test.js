@@ -29,9 +29,10 @@ describe('7. String and Bytes', () => {
   // ----------------------------------------
 
   // ----------------------------------------
-  // This Koan includes some "advanced" problems
-  // marked with an *, so remember to if you need to, and come
-  // back to them later.
+  // This Koan includes some "advanced"
+  // problems marked with an *, so remember
+  // to skip them if you need to, and come
+  // back later.
   // ----------------------------------------
 
   // ----------------------------------------
@@ -154,6 +155,9 @@ describe('7. String and Bytes', () => {
   // ----------------------------------------
   //
   // Unskip the 7.3 describe block.
+  //
+  // Add the following private property:
+  // - _name = "Koan Seven" (string)
   //
   // Add the following external methods:
   // - getNameAsBytes

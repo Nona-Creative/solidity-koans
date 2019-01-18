@@ -1,10 +1,6 @@
 const chai = require('chai')
 const { ContractUtils } = require('ethereum-utils')
 const chaiAsPromised = require('chai-as-promised')
-const parametrize = require('js-parametrize')
-const R = require('ramda')
-const BigNumber = require('bignumber.js')
-const Web3 = require('web3')
 
 const { Contract } = require('../src/common/utils/ethereum-test-utils')
 
