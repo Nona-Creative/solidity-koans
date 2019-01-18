@@ -6,13 +6,18 @@ Solidity Koans
 Create your own Git branch, so that you can commit your progress, 
 and so that you can checkout the ``solutions`` branch at any point. 
 
+### Prerequisites
+
+ - [Docker](https://docs.docker.com/docker-for-mac/install/)
+ - minimum of [Node v8.12.0](https://www.codementor.io/mercurial/how-to-install-node-js-on-macos-sierra-mphz41ekk#nvm)
+
 ### Steps
 
 1. Run ``npm install`` in the project folder
 
 2. Run ``npm run init`` initialize the project
 
-3. in ``terminal 1`` start required services (Make sure that you have [Docker](https://docs.docker.com/docker-for-mac/install/) installed):
+3. in ``terminal 1`` start required services:
     ```bash
     npm run services:buildup
     ```

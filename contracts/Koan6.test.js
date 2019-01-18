@@ -92,12 +92,12 @@ describe('6. Reverts and modifiers', () => {
   })
 
   // ----------------------------------------
-  // 6.3. require
+  // 6.3. assert
   // ----------------------------------------
   //
   // Unskip the 6.3 describe block.
   //
-  // Add the following public method:
+  // Add the following public property
   // - _latestSumResult
   // Add the following public method:
   // - freakOutAfterSumOver10

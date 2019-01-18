@@ -89,11 +89,11 @@ describe('2. Arithmetic & SafeMath', () => {
 
   describe.skip('2.2', () => {
     parametrize([
-      [1, 30, 29],
-      [30, 2, 28],
+      [1, 30, 29], // <-- the difference between 1 and 30 should be 29
+      [30, 2, 28], // <-- the difference between 30 and 2 should be 28
       [MAX.minus(1), MAX.minus(2), 1],
     ], (a, b, expected) => {
-      it('should return the sum of provided arguments', contract('Koan2', async ({ accounts, instance }) => {
+      it('should return the diff of provided arguments', contract('Koan2', async ({ accounts, instance }) => {
         // when ... we sum the 2 provided integers
         // NOTE: Web3 requires us to convert large numbers to hex before passing them as arguments
         const result = await ContractUtils.call(

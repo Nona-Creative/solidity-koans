@@ -4,7 +4,7 @@ import "./common/libs/SafeMath.sol";
 
 
 contract Koan2 {
-  using SafeMath for uint256;
+using SafeMath for uint256;
 
 
 }

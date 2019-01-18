@@ -150,7 +150,7 @@ describe('5. Structs & Events', () => {
   //   - memberAddress (address)
   //   And create a new Member record in
   //   _members with those values using an
-  //   autoincremented id as the mapping key.
+  //   auto-incremented id as the mapping key.
   // - getMember
   //   - id (uint)
   //   And return the member data for a member
@@ -185,14 +185,14 @@ describe('5. Structs & Events', () => {
         // then ... should dispatch single event per tx, with expected values, including member's id
         const MemberCreatedEvents = R.map(tx => ContractUtils.events('MemberCreated', tx), txs)
         assert.equal(MemberCreatedEvents[0].length, 1)
-        assert.equal(MemberCreatedEvents[0][0]._id, 1)
+        assert.equal(MemberCreatedEvents[0][0]._id, '1')
         assert.equal(MemberCreatedEvents[0][0]._name, 'Kaitlyn Koan')
         assert.equal(MemberCreatedEvents[0][0]._address.toLowerCase(), accounts[2])
         assert.equal(MemberCreatedEvents[1].length, 1)
-        assert.equal(MemberCreatedEvents[1][0]._id, 2)
+        assert.equal(MemberCreatedEvents[1][0]._id, '2')
         assert.equal(MemberCreatedEvents[1][0]._name, 'Kelvin Koan')
         assert.equal(MemberCreatedEvents[1][0]._address.toLowerCase(), accounts[1])
-        assert.equal(MemberCreatedEvents[2][0]._id, 3)
+        assert.equal(MemberCreatedEvents[2][0]._id, '3')
         assert.equal(MemberCreatedEvents[2][0]._name, 'K3PO Koan')
         assert.equal(MemberCreatedEvents[2][0]._address.toLowerCase(), accounts[0])
 

@@ -18,8 +18,8 @@ describe('WhySafeMath', () => {
   // ----------------------------------------
   // In Koan 6 we will be introducing the
   // SafeMath library, which allows us to do
-  // safer arithmitic with unsigned integers.
-  // Doing arithmitic without SafeMath may
+  // safer arithmetic with unsigned integers.
+  // Doing arithmetic without SafeMath may
   // lead to incorrect calculations in cases
   // where the operation overflows.
   // SafeMath instead reverts the transaction
