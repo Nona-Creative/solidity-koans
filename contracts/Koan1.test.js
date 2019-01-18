@@ -101,36 +101,35 @@ describe('1. Value Data Types', () => {
     })
   })
 
-  // TODO: introduce simple getter and setter here?
-  // // ----------------------------------------
-  // // 1.4. a simple function that updates a property
-  // // ----------------------------------------
-  // //
-  // // Unskip the 1.4 describe block.
-  // //
-  // // Then create a method called setMyBoolean which:
-  // // - that takes a single boolean
-  // // - and update myBoolean
-  // // ----------------------------------------
+  // ----------------------------------------
+  // 1.4. a simple function that updates a property
+  // ----------------------------------------
   //
-  // describe('1.4', () => {
-  //   parametrize([
-  //     [false],
-  //     [true],
-  //   ], (value) => {
-  //     it('should set the value of myBoolean as expected', contract('Koan1', async ({ accounts, instance }) => {
-  //       // when ... we set setMyBoolean
-  //       await ContractUtils.send(
-  //         instance.methods.setMyBoolean(value),
-  //         { from: accounts[0] },
-  //       )
-  //       // then ... should now contain the expected value
-  //       const result = await ContractUtils.call(
-  //         instance.methods.myBoolean(),
-  //         { from: accounts[0] },
-  //       )
-  //       assert.equal(result, value)
-  //     }))
-  //   })
-  // })
+  // Unskip the 1.4 describe block.
+  //
+  // Then create a method called setMyBoolean which:
+  // - that takes a single boolean
+  // - and update myBoolean
+  // ----------------------------------------
+
+  describe('1.4', () => {
+    parametrize([
+      [false],
+      [true],
+    ], (value) => {
+      it('should set the value of myBoolean as expected', contract('Koan1', async ({ accounts, instance }) => {
+        // when ... we set setMyBoolean
+        await ContractUtils.send(
+          instance.methods.setMyBoolean(value),
+          { from: accounts[0] },
+        )
+        // then ... should now contain the expected value
+        const result = await ContractUtils.call(
+          instance.methods.myBoolean(),
+          { from: accounts[0] },
+        )
+        assert.equal(result, value)
+      }))
+    })
+  })
 })

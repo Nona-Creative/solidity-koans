@@ -18,9 +18,9 @@ module.exports = {
     'WhySafeMath': 'WhySafeMath.sol:WhySafeMath',
     'Koan2': 'Koan2.sol:Koan2',
     'Koan3': 'Koan3.sol:Koan3',
-    // 'Koan4': 'Koan4.sol:Koan4',
-    // 'Koan5': 'Koan5.sol:Koan5',
-    // 'Koan6': 'Koan6.sol:Koan6',
+    'Koan4': 'Koan4.sol:Koan4',
+    'Koan5': 'Koan5.sol:Koan5',
+    'Koan6': 'Koan6.sol:Koan6',
     'Koan7': 'Koan7.sol:Koan7',
   }
 }

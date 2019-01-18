@@ -37,6 +37,7 @@
   "dependencies": {
     "big-number": "^1.0.0",
     "bignumber.js": "^2.0.7",
+    "bluebird": "^3.5.3",
     "dotenv": "^6.1.0",
     "ethereum-utils": "Nona-Creative/ethereum-utils#v0.1.2",
     "ramda": "^0.25.0",
