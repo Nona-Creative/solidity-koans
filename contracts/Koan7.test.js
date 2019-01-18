@@ -29,6 +29,12 @@ describe('7. String and Bytes', () => {
   // ----------------------------------------
 
   // ----------------------------------------
+  // This Koan includes some "advanced" problems
+  // marked with an *, so remember to if you need to, and come
+  // back to them later.
+  // ----------------------------------------
+
+  // ----------------------------------------
   // 7.1. string properties
   // ----------------------------------------
   //

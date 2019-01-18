@@ -33,12 +33,12 @@ describe('3. Storage Data Types : Arrays', () => {
   //
   // Unskip the 3.1 describe block.
   //
-  // Add the following public property:
+  // Add the following private property:
   // - _xs
   // Add the following public methods:
-  // - set
+  // - setXs
   //   Set the value of _xs
-  // - get
+  // - getXs
   //   Returns the value of _xs
   // ----------------------------------------
 
@@ -49,16 +49,16 @@ describe('3. Storage Data Types : Arrays', () => {
       ])
     }))
 
-    describe('set / get', () => {
+    describe('setXs / getXs', () => {
       it('should set and get _xs as expected', contract('Koan3', async ({ accounts, instance }) => {
         // when ... we set and then get _xs
         await ContractUtils.send(
-          instance.methods.set([1, 2, 3, 4]),
+          instance.methods.setXs([1, 2, 3, 4]),
           { from: accounts[0] },
           true,
         )
         const result = await ContractUtils.call(
-          instance.methods.get(),
+          instance.methods.getXs(),
           { from: accounts[0] },
           true,
         )
@@ -76,30 +76,30 @@ describe('3. Storage Data Types : Arrays', () => {
   // Unskip the 3.2 describe block.
   //
   // Add the following public method:
-  // - append
+  // - appendX
   //   Should take a uint and add it to _xs.
   // ----------------------------------------
 
   describe.skip('3.2', () => {
-    describe('append', () => {
+    describe('appendX', () => {
       it('should add to _xs array as expected', contract('Koan3', async ({ accounts, instance }) => {
         // given ... _xs has a predictable value
         await ContractUtils.send(
-          instance.methods.set([1, 2, 3, 4]),
+          instance.methods.setXs([1, 2, 3, 4]),
           { from: accounts[0] },
           true,
         )
 
         // when ... we append 5 to it
         await ContractUtils.send(
-          instance.methods.append(5),
+          instance.methods.appendX(5),
           { from: accounts[0] },
           true,
         )
 
         // then ... should have appended as expected
         const result = await ContractUtils.call(
-          instance.methods.get(),
+          instance.methods.getXs(),
           { from: accounts[0] },
           true,
         )
@@ -115,13 +115,13 @@ describe('3. Storage Data Types : Arrays', () => {
   // Unskip the 3.3 describe block.
   //
   // Add the following public method:
-  // - sum
+  // - sumXs
   //   Should return the sum of all the values
   //   in _xs.
   // ----------------------------------------
 
   describe.skip('3.3', () => {
-    describe('sum', () => {
+    describe('sumXs', () => {
       parametrize([
         [[0, 1, 2, 3, 4, 5], 15],
         [[1, 3, 2, 10], 16],
@@ -130,14 +130,14 @@ describe('3. Storage Data Types : Arrays', () => {
         it('should sum the values in _xs as expected', contract('Koan3', async ({ accounts, instance }) => {
           // given ... _xs has a predictable value
           await ContractUtils.send(
-            instance.methods.set(xs),
+            instance.methods.setXs(xs),
             { from: accounts[0] },
             true,
           )
 
           // when ... we sum it's values
           const result = await ContractUtils.call(
-            instance.methods.sum(),
+            instance.methods.sumXs(),
             { from: accounts[0] },
             true,
           )
@@ -150,20 +150,20 @@ describe('3. Storage Data Types : Arrays', () => {
   })
 
   // ----------------------------------------
-  // 3.4. arrays arguments and pure functions
+  // 3.4. array arguments and pure functions
   // ----------------------------------------
   //
   // Unskip the 3.4 describe block.
   //
   // Add the following public method:
-  // - countEvens
+  // - countEvenXs
   //   Should take an array of uints, and
   //   return the number of even numbers in
   //   the provided array.
   // ----------------------------------------
 
   describe.skip('3.4', () => {
-    describe('countEvens', () => {
+    describe('countEvenXs', () => {
       parametrize([
         [[0, 1, 2, 3, 4, 5, 6], 4],
         [[1, 3, 5, 6], 1],
@@ -172,14 +172,14 @@ describe('3. Storage Data Types : Arrays', () => {
         it('should count the evens numbers in _xs', contract('Koan3', async ({ accounts, instance }) => {
           // given ... _xs has a predictable value
           await ContractUtils.send(
-            instance.methods.set(xs),
+            instance.methods.setXs(xs),
             { from: accounts[0] },
             true,
           )
 
           // when ... we count the evens numbers in _xs
           const result = await ContractUtils.call(
-            instance.methods.countEvens(xs),
+            instance.methods.countEvenXs(xs),
             { from: accounts[0] },
             true,
           )
@@ -198,16 +198,16 @@ describe('3. Storage Data Types : Arrays', () => {
   // Unskip the 3.5 describe block.
   //
   // Add the following public method:
-  // - removeAt
+  // - removeXAt
   //   Should take an index (uint) and remove
   //   the item at position from _xs.
   //   Should not leave a gap at that position
-  //   and the length of _xs after removeAt
+  //   and the length of _xs after removeXAt
   //   should be one shorter.
   // ----------------------------------------
 
   describe.skip('3.5', () => {
-    describe('removeAt', () => {
+    describe('removeXAt', () => {
       parametrize([
         [[1, 2, 3, 4, 5], 2, [1, 2, 4, 5]],
         [[1, 2, 3, 4, 5], 0, [2, 3, 4, 5]],
@@ -217,21 +217,21 @@ describe('3. Storage Data Types : Arrays', () => {
         it('should remove the value from target index without leaving a gap', contract('Koan3', async ({ accounts, instance }) => {
           // given ... _xs has a predictable value
           await ContractUtils.send(
-            instance.methods.set(before),
+            instance.methods.setXs(before),
             { from: accounts[0] },
             true,
           )
 
           // when ... we remove the item at the provided index
           await ContractUtils.send(
-            instance.methods.removeAt(index),
+            instance.methods.removeXAt(index),
             { from: accounts[0] },
             true,
           )
 
           // then ... should remove the value from target index without leaving a gap
           const result = await ContractUtils.call(
-            instance.methods.get(),
+            instance.methods.getXs(),
             { from: accounts[0] },
             true,
           )
@@ -248,13 +248,13 @@ describe('3. Storage Data Types : Arrays', () => {
   // Unskip the 3.6 describe block.
   //
   // Add the following public method:
-  // - getEvens
+  // - getEvenXs
   //   Should return a new array containing
   //   all the even numbers from _xs.
   // ----------------------------------------
 
   describe.skip('3.6', () => {
-    describe('getEvens', () => {
+    describe('getEvenXs', () => {
       parametrize([
         [[0, 1, 2, 3, 4, 5, 6], [0, 2, 4, 6]],
         [[1, 3, 5, 6], [6]],
@@ -263,14 +263,14 @@ describe('3. Storage Data Types : Arrays', () => {
         it('should return all the even numbers from _xs', contract('Koan3', async ({ accounts, instance }) => {
           // given ... _xs has a predictable value
           await ContractUtils.send(
-            instance.methods.set(value),
+            instance.methods.setXs(value),
             { from: accounts[0] },
             true,
           )
 
           // when ... we get all the even numbers from _xs
           const result = await ContractUtils.call(
-            instance.methods.getEvens(),
+            instance.methods.getEvenXs(),
             { from: accounts[0] },
             true,
           )
